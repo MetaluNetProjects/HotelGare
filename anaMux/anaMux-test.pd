@@ -1,0 +1,56 @@
+#N canvas 350 81 752 767 10;
+#X declare -stdpath Fraise;
+#X obj 48 21 declare -stdpath Fraise;
+#X obj 48 243 analog/parse;
+#X obj 48 268 route 0 1 2 3;
+#X floatatom 48 377 8 0 0 0 - - -, f 8;
+#X obj 48 213 fruit/receive fruit1;
+#X obj 47 44 pied/pied 0 41424;
+#X obj 45 147 fruit/fruit 1 fruit1 10 anaMuxFW;
+#X obj 160 378 t f f;
+#X obj 205 413 min;
+#X obj 205 434 f;
+#X obj 160 434 f;
+#X obj 160 413 max;
+#X msg 230 351 1023;
+#X msg 230 372 0;
+#X floatatom 205 455 5 0 0 0 - - -, f 5;
+#X floatatom 160 455 5 0 0 0 - - -, f 5;
+#X obj 160 475 -;
+#X floatatom 160 496 5 0 0 0 - - -, f 5;
+#X obj 122 323 / 1;
+#X obj 155 530 anaMux 0.994 0.461 0.216 0.094;
+#X obj 157 598 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 186 598 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 219 598 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 248 598 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 157 569 route 0 1 2 3;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 18 0;
+#X connect 2 0 19 0;
+#X connect 4 0 1 0;
+#X connect 7 0 11 0;
+#X connect 7 1 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 8 1;
+#X connect 9 0 14 0;
+#X connect 10 0 11 1;
+#X connect 10 0 15 0;
+#X connect 11 0 10 0;
+#X connect 12 0 8 1;
+#X connect 12 0 13 0;
+#X connect 13 0 11 1;
+#X connect 14 0 16 1;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 18 0 7 0;
+#X connect 19 0 24 0;
+#X connect 24 0 20 0;
+#X connect 24 1 21 0;
+#X connect 24 2 22 0;
+#X connect 24 3 23 0;
